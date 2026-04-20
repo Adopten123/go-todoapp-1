@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/Adopten123/go-todoapp-1/internal/core/domain"
-	"github.com/jackc/pgx/v5"
+	core_postgres_pool "github.com/Adopten123/go-todoapp-1/internal/core/repository/postgres/pool"
 )
 
 func (r *UsersRepository) PatchUser(
@@ -24,7 +24,7 @@ func (r *UsersRepository) PatchUser(
 	    phone_number = $2,
 	    version = version + 1
 	WHERE id = $3 AND version = $4
-	RETURNING id, version, full_name, phone_number
+	RETURNING id, version, full_name, phone_number;
 	`
 	row := r.pool.QueryRow(ctx, query, user.FullName, user.PhoneNumber, id, user.Version)
 
@@ -36,7 +36,7 @@ func (r *UsersRepository) PatchUser(
 		&userModel.PhoneNumber,
 	)
 	if err != nil {
-		if errors.Is(err, pgx.ErrNoRows) {
+		if errors.Is(err, core_postgres_pool.ErrNoRows) {
 			return domain.User{}, fmt.Errorf(
 				"user wid id='%d' concurrently accessed", id)
 		}

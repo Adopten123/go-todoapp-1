@@ -2,12 +2,12 @@ package users_postgres_repository
 
 import (
 	"context"
-	"database/sql"
 	"errors"
 	"fmt"
 
 	"github.com/Adopten123/go-todoapp-1/internal/core/domain"
 	core_errors "github.com/Adopten123/go-todoapp-1/internal/core/errors"
+	core_postgres_pool "github.com/Adopten123/go-todoapp-1/internal/core/repository/postgres/pool"
 )
 
 func (r *UsersRepository) GetUser(ctx context.Context, id int) (domain.User, error) {
@@ -17,7 +17,7 @@ func (r *UsersRepository) GetUser(ctx context.Context, id int) (domain.User, err
 	query := `
 	SELECT id, version, full_name, phone_number
 	FROM todoapp.users
-	WHERE id = $1
+	WHERE id = $1;
 	`
 	row := r.pool.QueryRow(ctx, query, id)
 
@@ -30,7 +30,7 @@ func (r *UsersRepository) GetUser(ctx context.Context, id int) (domain.User, err
 	)
 
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
+		if errors.Is(err, core_postgres_pool.ErrNoRows) {
 			return domain.User{}, fmt.Errorf(
 				"user with id='%d': %w",
 				id,
