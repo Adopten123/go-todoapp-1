@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1da0ac36-b095-48b8-8d9a-44fbbe1857ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/internal/core/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/todoapp/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/todoapp/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/adapters.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/adapters.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
