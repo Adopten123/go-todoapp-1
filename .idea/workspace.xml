@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1da0ac36-b095-48b8-8d9a-44fbbe1857ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/core/domain/task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/features/tasks/transport/http/transport.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/request/path_values.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/request/path_values.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/request/query_params.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/request/query_params.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/todoapp/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/todoapp/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/adapters.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/adapters.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +46,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.GoLinterPluginOnboarding": "true",
-    "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
-    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.analysis.ui.options.defaults": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "feature/tasks",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/adopten-laptop/GolandProjects/go-todoapp-1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginOnboarding&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginOnboardingV2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginStorageMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.analysis.ui.options.defaults&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/tasks&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adopten-laptop/GolandProjects/go-todoapp-1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\programming\go\projects\go-todoapp-1\internal\core\transport\http\request" />
