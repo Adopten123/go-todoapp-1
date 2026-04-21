@@ -5,31 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1da0ac36-b095-48b8-8d9a-44fbbe1857ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/errors.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/adapters.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/pool.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/core/transport/http/middleware/dummy.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/core/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/todoapp/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/todoapp/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/domain/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/domain/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/logger/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/logger/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/logger/logger.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/repository/postgres/pool/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pgx/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pool.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/repository/postgres/pool/pool.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/middleware/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/middleware/common.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/response/writer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/response/writer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/server/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/server/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/server/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/server/route.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/server/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/server/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/utils/path_values.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/request/path_values.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/core/transport/http/utils/query_params.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/core/transport/http/request/query_params.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/features/users/repository/postgres/get_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/features/users/repository/postgres/get_user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/features/users/repository/postgres/patch_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/features/users/repository/postgres/patch_user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/features/users/transport/http/delete_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/features/users/transport/http/delete_user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/features/users/transport/http/get_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/features/users/transport/http/get_user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/features/users/transport/http/get_users.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/features/users/transport/http/get_users.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/features/users/transport/http/patch_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/features/users/transport/http/patch_user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +53,20 @@
     &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.GoLinterPluginOnboarding&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginOnboardingV2&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.GoLinterPluginStorageMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.analysis.ui.options.defaults&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/users&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/tasks&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/programming/go/projects/go-todoapp-1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adopten-laptop/GolandProjects/go-todoapp-1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
@@ -98,8 +81,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-f466f9b0953e-146d08934cbf-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-252.27397.100" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-GO-252.27397.100" />
+        <option value="bundled-gosdk-72a9cf600ed8-dfa3e7267ae0-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-253.30387.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-GO-253.30387.193" />
       </set>
     </attachedChunks>
   </component>
@@ -115,8 +98,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VgoProject">
-    <settings-migrated>true</settings-migrated>
   </component>
 </project>

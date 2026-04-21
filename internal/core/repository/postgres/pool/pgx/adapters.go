@@ -20,7 +20,7 @@ type pgxRow struct {
 func (r pgxRow) Scan(dest ...any) error {
 	err := r.Row.Scan(dest...)
 	if err != nil {
-		return core_postgres_pool.ErrNoRows
+		return mapErrors(err)
 	}
 
 	return nil
