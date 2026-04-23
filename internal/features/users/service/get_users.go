@@ -10,7 +10,8 @@ import (
 
 func (s *UsersService) GetUsers(
 	ctx context.Context,
-	limit, offset *int,
+	limit *int,
+	offset *int,
 ) ([]domain.User, error) {
 	if limit != nil && *limit < 0 {
 		return nil, fmt.Errorf(
@@ -26,8 +27,11 @@ func (s *UsersService) GetUsers(
 		)
 	}
 
-	users, err := s.usersRepository.GetUsers(ctx, limit, offset)
-
+	users, err := s.usersRepository.GetUsers(
+		ctx,
+		limit,
+		offset,
+	)
 	if err != nil {
 		return nil, fmt.Errorf("get users from repository: %w", err)
 	}
