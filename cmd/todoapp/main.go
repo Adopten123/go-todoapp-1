@@ -22,6 +22,9 @@ import (
 	users_postgres_repository "github.com/Adopten123/go-todoapp-1/internal/features/users/repository/postgres"
 	users_service "github.com/Adopten123/go-todoapp-1/internal/features/users/service"
 	users_transport_http "github.com/Adopten123/go-todoapp-1/internal/features/users/transport/http"
+	web_fs_repository "github.com/Adopten123/go-todoapp-1/internal/features/web/repository/file_system"
+	web_service "github.com/Adopten123/go-todoapp-1/internal/features/web/service"
+	web_transport_http "github.com/Adopten123/go-todoapp-1/internal/features/web/transport/http"
 	"go.uber.org/zap"
 
 	_ "github.com/Adopten123/go-todoapp-1/docs"
@@ -79,6 +82,12 @@ func main() {
 	statisticsService := statistics_service.NewStatisticsService(statisticsRepo)
 	statisticsTransportHTTP := statistics_transport_http.NewStatisticsHTTPHandler(statisticsService)
 
+	log.Debug("initializing feature", zap.String("feature", "web"))
+
+	webRepo := web_fs_repository.NewWebRepository()
+	webService := web_service.NewWebService(webRepo)
+	webTransportHTTP := web_transport_http.NewWebHTTPHandler(webService)
+
 	log.Debug("initializing HTTP server")
 
 	httpServer := core_http_server.NewHTTPServer(
@@ -97,6 +106,7 @@ func main() {
 	apiVersionRouter.RegisterRouters(statisticsTransportHTTP.Routes()...)
 
 	httpServer.RegisterAPIRouters(apiVersionRouter)
+	httpServer.RegisterRouters(webTransportHTTP.Routes()...)
 	httpServer.RegisterSwagger()
 
 	if err := httpServer.Run(ctx); err != nil {

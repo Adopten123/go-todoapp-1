@@ -2,13 +2,14 @@ package users_transport_http
 
 import (
 	"github.com/Adopten123/go-todoapp-1/internal/core/domain"
+	"github.com/google/uuid"
 )
 
 type UserDTOResponse struct {
-	ID          int     `json:"id"           example:"1"`
-	Version     int     `json:"version"      example:"3"`
-	FullName    string  `json:"full_name"    example:"Ivan Ivanov"`
-	PhoneNumber *string `json:"phone_number" example:"+79998887766"`
+	ID          uuid.UUID `json:"id"           example:"550e8400-e29b-41d4-a716-446655440000"`
+	Version     int       `json:"version"      example:"3"`
+	FullName    string    `json:"full_name"    example:"Ivan Ivanov"`
+	PhoneNumber *string   `json:"phone_number" example:"+79998887766"`
 }
 
 func userDTOFromDomain(user domain.User) UserDTOResponse {
@@ -20,7 +21,7 @@ func userDTOFromDomain(user domain.User) UserDTOResponse {
 	}
 }
 
-func usersDTOFromDomain(users []domain.User) []UserDTOResponse {
+func usersDTOFromDomains(users []domain.User) []UserDTOResponse {
 	usersDTO := make([]UserDTOResponse, len(users))
 
 	for i, user := range users {
@@ -29,3 +30,4 @@ func usersDTOFromDomain(users []domain.User) []UserDTOResponse {
 
 	return usersDTO
 }
+

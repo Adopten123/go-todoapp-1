@@ -6,6 +6,7 @@ import (
 
 	"github.com/Adopten123/go-todoapp-1/internal/core/domain"
 	core_http_server "github.com/Adopten123/go-todoapp-1/internal/core/transport/http/server"
+	"github.com/google/uuid"
 )
 
 type UsersHTTPHandler struct {
@@ -13,11 +14,33 @@ type UsersHTTPHandler struct {
 }
 
 type UsersService interface {
-	CreateUser(ctx context.Context, user domain.User) (domain.User, error)
-	GetUsers(ctx context.Context, limit, offset *int) ([]domain.User, error)
-	GetUser(ctx context.Context, id int) (domain.User, error)
-	DeleteUser(ctx context.Context, id int) error
-	PatchUser(ctx context.Context, id int, patch domain.UserPatch) (domain.User, error)
+	CreateUser(
+		ctx context.Context,
+		fullName string,
+		phoneNumber *string,
+	) (domain.User, error)
+
+	GetUsers(
+		ctx context.Context,
+		limit *int,
+		offset *int,
+	) ([]domain.User, error)
+
+	GetUser(
+		ctx context.Context,
+		id uuid.UUID,
+	) (domain.User, error)
+
+	DeleteUser(
+		ctx context.Context,
+		id uuid.UUID,
+	) error
+
+	PatchUser(
+		ctx context.Context,
+		id uuid.UUID,
+		patch domain.UserPatch,
+	) (domain.User, error)
 }
 
 func NewUsersHTTPHandler(usersService UsersService) *UsersHTTPHandler {

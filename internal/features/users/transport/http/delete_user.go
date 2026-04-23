@@ -18,17 +18,18 @@ import (
 // @Failure      404 {object} core_http_response.ErrorResponse "User not found"
 // @Failure      500 {object} core_http_response.ErrorResponse "Internal server error"
 // @Router       /users/{id} [delete]
-func (h *UsersHTTPHandler) DeleteUser(w http.ResponseWriter, r *http.Request) {
+func (h *UsersHTTPHandler) DeleteUser(rw http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 	log := core_logger.FromContext(ctx)
-	responseHandler := core_http_response.NewHTTPResponseHandler(log, w)
+	responseHandler := core_http_response.NewHTTPResponseHandler(log, rw)
 
-	userID, err := core_http_request.GetIntPathValue(r, "id")
+	userID, err := core_http_request.GetUUIDPathValue(r, "id")
 	if err != nil {
 		responseHandler.ErrorResponse(
 			err,
 			"failed to get userID path value",
 		)
+
 		return
 	}
 
@@ -37,6 +38,7 @@ func (h *UsersHTTPHandler) DeleteUser(w http.ResponseWriter, r *http.Request) {
 			err,
 			"failed to delete user",
 		)
+
 		return
 	}
 

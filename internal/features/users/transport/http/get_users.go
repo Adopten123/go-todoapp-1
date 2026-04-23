@@ -22,16 +22,16 @@ type GetUsersResponse []UserDTOResponse
 // @Failure      400 {object} core_http_response.ErrorResponse "Bad request"
 // @Failure      500 {object} core_http_response.ErrorResponse "Internal server error"
 // @Router       /users [get]
-func (h *UsersHTTPHandler) GetUsers(w http.ResponseWriter, r *http.Request) {
+func (h *UsersHTTPHandler) GetUsers(rw http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 	log := core_logger.FromContext(ctx)
-	responseHandler := core_http_response.NewHTTPResponseHandler(log, w)
+	responseHandler := core_http_response.NewHTTPResponseHandler(log, rw)
 
 	limit, offset, err := getLimitOffsetQueryParams(r)
 	if err != nil {
 		responseHandler.ErrorResponse(
 			err,
-			"failed to get 'limit'/'offset' query params",
+			"failed to get 'limit'/'offset' query param",
 		)
 
 		return
@@ -43,12 +43,13 @@ func (h *UsersHTTPHandler) GetUsers(w http.ResponseWriter, r *http.Request) {
 			err,
 			"failed to get users",
 		)
+
 		return
 	}
 
-	response := GetUsersResponse(usersDTOFromDomain(userDomains))
+	response := GetUsersResponse(usersDTOFromDomains(userDomains))
 
-	responseHandler.JSONResponse(response, http.StatusCreated)
+	responseHandler.JSONResponse(response, http.StatusOK)
 }
 
 func getLimitOffsetQueryParams(r *http.Request) (*int, *int, error) {

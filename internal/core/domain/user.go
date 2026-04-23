@@ -5,16 +5,23 @@ import (
 	"regexp"
 
 	core_errors "github.com/Adopten123/go-todoapp-1/internal/core/errors"
+	"github.com/google/uuid"
 )
 
 type User struct {
-	ID          int
-	Version     int
+	ID      uuid.UUID
+	Version int
+
 	FullName    string
 	PhoneNumber *string
 }
 
-func NewUser(id int, version int, fullName string, phoneNumber *string) User {
+func NewUser(
+	id uuid.UUID,
+	version int,
+	fullName string,
+	phoneNumber *string,
+) User {
 	return User{
 		ID:          id,
 		Version:     version,
@@ -23,13 +30,18 @@ func NewUser(id int, version int, fullName string, phoneNumber *string) User {
 	}
 }
 
-func NewUserUninitialized(
+func CreateUser(
 	fullName string,
 	phoneNumber *string,
 ) User {
+	var (
+		id      = uuid.New()
+		version = 1
+	)
+
 	return NewUser(
-		UninitializedID,
-		UninitializedVersion,
+		id,
+		version,
 		fullName,
 		phoneNumber,
 	)

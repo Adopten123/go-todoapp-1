@@ -10,13 +10,13 @@ env-down:
 	@docker compose down todoapp-postgres
 
 env-cleanup:
-	@read -p "Очистить все volume файлы окружения? Опасность утери данных. [y/N]: " ans; \
+	@printf "Очистить все volume файлы окружения? Опасность утери данных. [y/N]: " && read ans; \
 	if [ "$$ans" = "y" ]; then \
-	  docker compose down todoapp-postgres port-forwarder && \
-	  rm -rf out/pgdata && \
-	  echo "Файлы окружения очищены"; \
+		docker compose rm -s -v -f todoapp-postgres port-forwarder && \
+		rm -rf out/pgdata && \
+		echo "Файлы окружения очищены"; \
 	else \
-	  echo "Очистка окружения отменена"; \
+		echo "Очистка окружения отменена"; \
 	fi
 
 env-port-forward:
