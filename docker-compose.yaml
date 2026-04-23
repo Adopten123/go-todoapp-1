@@ -40,5 +40,17 @@ services:
     ports:
       - "127.0.0.1:5432:5432"
 
+  swagger:
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM golang:1.25.0-alpine
+        RUN apk add --no-cache git
+        RUN go install github.com/swaggo/swag/cmd/swag@v1.16.6
+        WORKDIR /code
+        ENTRYPOINT ["swag"]
+    volumes:
+      - .:/code
+
 volumes:
   pgdata:
